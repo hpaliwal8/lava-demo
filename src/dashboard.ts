@@ -57,7 +57,7 @@ export async function buildDashboard(
     const startOfDay = new Date();
     startOfDay.setUTCHours(0, 0, 0, 0);
     const usage = await lava.getUsage({ start: startOfDay.toISOString() });
-    walletSpendToday = `$${parseFloat(usage.totals.total_charge).toFixed(4)}`;
+    walletSpendToday = `$${parseFloat(usage.totals.total_cost).toFixed(4)}`;
   } catch {
     walletSpendToday = null;
   }
