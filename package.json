@@ -1,16 +1,23 @@
 {
   "name": "lava-demo",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "type": "module",
+  "description": "AgentBudget — multi-agent cost governance demo using Lava's gateway, spend keys, and billing API.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "setup": "tsx src/index.ts setup",
+    "demo": "tsx src/index.ts demo",
+    "enforce": "tsx src/index.ts enforce",
+    "dashboard": "tsx src/index.ts dashboard"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.99.0",
     "tsx": "^4.22.3",
     "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1"
   }
 }
